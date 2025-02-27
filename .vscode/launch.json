@@ -1,0 +1,32 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "(game) Launch",
+        "type": "cppvsdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/Deployment/bd.com",
+        "args": [],
+        "stopAtEntry": false,
+        "cwd": "${workspaceRoot}/Deployment",
+        "preLaunchTask": "Build game"
+      },
+      {
+        "name": "(knob) Launch",
+        "type": "cppvsdbg",
+        "request": "launch",
+        "windows": {
+          "program": "${workspaceFolder}/knob.exe",
+        },
+        "args": [],
+        "stopAtEntry": false,
+        "cwd": "${workspaceRoot}",
+        "preLaunchTask": "Build knob"
+      }
+    ]
+
+
+}

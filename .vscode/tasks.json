@@ -1,0 +1,41 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build knob",
+            "type": "shell",
+            "windows" : {
+                "command": "${workspaceFolder}/Tools/FoundryTools_windows_x64/zig.exe",
+                "args": [
+                    "cc",
+                    "-std=c11",
+                    "--debug",
+                    "-fno-sanitize=undefined",
+                    "-fno-omit-frame-pointer",
+                    "-target",
+                    "x86_64-windows",
+                    "knob.c",
+                    "-o",
+                    "knob.exe"
+                ],
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Build game",
+            "type": "shell",
+            "windows":{
+                "command": "${workspaceFolder}/knob.exe",
+            },
+            "linux":{
+                "command": "${workspaceFolder}/knob",
+            },
+            "dependsOn": "Build knob",
+        }
+    ]
+}
