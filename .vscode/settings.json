@@ -1,5 +1,6 @@
 {
     "files.associations": {
+        "*.json": "jsonl",
         "*.inc": "c",
         "assert.h": "c",
         "limits.h": "c",
@@ -24,7 +25,16 @@
         "functional": "c",
         "direct.h": "c",
         "filesystem": "c",
-        "future": "c"
+        "future": "c",
+        "bitset": "c",
+        "iterator": "c",
+        "xhash": "c",
+        "xmemory": "c",
+        "xtree": "c",
+        "__bit_reference": "c",
+        "map": "c",
+        "unordered_map": "c",
+        "sqlite3.h": "c"
     },
     "cmake.configureOnOpen": false
 }

@@ -12,7 +12,8 @@
         "args": [],
         "stopAtEntry": false,
         "cwd": "${workspaceRoot}/Deployment",
-        "preLaunchTask": "Build game"
+        "preLaunchTask": "Build game",
+        "console": "newExternalWindow"
       },
       {
         "name": "(knob) Launch",
